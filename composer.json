@@ -1,0 +1,26 @@
+{
+    "name": "xapp/mail",
+    "type": "xapp-module",
+    "keywords": ["xapp", "mail"],
+    "homepage": "http://xapp-php.com",
+    "license": "GPL",
+    "support":{
+        "issues": "https://bugs.xapp-php.com:8888",
+        "wiki": "http://www.xapp-php.com/docs/html/"
+    },
+    "config": {
+        "vendor-dir": "lib/vendor"
+    },
+    "require": {
+        "php": ">=5.2.6",
+        "xapp/core": "master",
+        "swiftmailer/swiftmailer": "v4.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Xapp_Mail": "../.."
+        },
+        "classmap": ["/"]
+    },
+    "minimum-stability": "dev"
+}
