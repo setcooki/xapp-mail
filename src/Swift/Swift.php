@@ -268,7 +268,7 @@ class Xapp_Mail_Swift extends Swift_Mailer implements Xapp_Mail_Interface, Xapp_
                         }
                         break;
                     default:
-                        throw new Xapp_Mail_Swift_Exception(xapp_sprintf(_("mail protocol: %s is not supported by swift mailer"), $protocol), 1130302);
+                        throw new Xapp_Mail_Swift_Exception(xapp_sprintf(__("mail protocol: %s is not supported by swift mailer"), $protocol), 1130302);
                 }
             }else{
                 $this->_transport = xapp_get_option(self::TRANSPORT, $this);
@@ -276,7 +276,7 @@ class Xapp_Mail_Swift extends Swift_Mailer implements Xapp_Mail_Interface, Xapp_
         }
         catch(Swift_SwiftException $e)
         {
-            throw new Xapp_Mail_Swift_Exception(xapp_sprintf(_("swift mail error: %d, %s"), $e->getCode(), $e->getMessage()), 1130301);
+            throw new Xapp_Mail_Swift_Exception(xapp_sprintf(__("swift mail error: %d, %s"), $e->getCode(), $e->getMessage()), 1130301);
         }
     }
 
@@ -320,12 +320,12 @@ class Xapp_Mail_Swift extends Swift_Mailer implements Xapp_Mail_Interface, Xapp_
             {
                 return parent::send($message, $failed);
             }else{
-                throw new Xapp_Mail_Swift_Exception(_("first parameter must be instance of Swift_Message"), 1130502);
+                throw new Xapp_Mail_Swift_Exception(__("first parameter must be instance of Swift_Message"), 1130502);
             }
         }
         catch(Swift_SwiftException $e)
         {
-            throw new Xapp_Mail_Swift_Exception(xapp_sprintf(_("swift mail error: %d, %s"), $e->getCode(), $e->getMessage()), 1130501);
+            throw new Xapp_Mail_Swift_Exception(xapp_sprintf(__("swift mail error: %d, %s"), $e->getCode(), $e->getMessage()), 1130501);
         }
     }
 
@@ -361,7 +361,7 @@ class Xapp_Mail_Swift extends Swift_Mailer implements Xapp_Mail_Interface, Xapp_
         }
         catch(Swift_SwiftException $e)
         {
-            throw new Xapp_Mail_Swift_Exception(xapp_sprintf(_("swift mail error: %d, %s"), $e->getCode(), $e->getMessage()), 1130601);
+            throw new Xapp_Mail_Swift_Exception(xapp_sprintf(__("swift mail error: %d, %s"), $e->getCode(), $e->getMessage()), 1130601);
         }
     }
 }

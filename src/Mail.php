@@ -32,7 +32,7 @@ abstract class Xapp_Mail
         {
             return new $class($protocol, $options);
         }else{
-            throw new Xapp_Mail_Exception(xapp_sprintf(_("unable to create class for driver: %s"), $driver), 1120101);
+            throw new Xapp_Mail_Exception(xapp_sprintf(__("unable to create class for driver: %s"), $driver), 1120101);
         }
     }
 
@@ -56,7 +56,7 @@ abstract class Xapp_Mail
         {
             return $class::instance($protocol, $options);
         }else{
-            throw new Xapp_Mail_Exception(xapp_sprintf(_("unable to create singleton instance for driver: %s"), $driver), 1120201);
+            throw new Xapp_Mail_Exception(xapp_sprintf(__("unable to create singleton instance for driver: %s"), $driver), 1120201);
         }
     }
 }

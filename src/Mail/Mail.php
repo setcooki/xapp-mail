@@ -152,7 +152,7 @@ class Xapp_Mail_Mail implements Xapp_Mail_Interface, Xapp_Singleton_Interface
             }
             return $send;
         }else{
-            throw new Xapp_Mail_Mail_Exception(_("first parameter must be instance of stdClass"), 1230301);
+            throw new Xapp_Mail_Mail_Exception(__("first parameter must be instance of stdClass"), 1230301);
         }
     }
 
